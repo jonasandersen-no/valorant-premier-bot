@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <option name="ACTIVE_PROFILES" value="dev,intellij" />
+    <module name="valorant-premier-bot" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="no.jonasandersen.premier.ValorantPremierBotApplication" />
+    <option name="VM_PARAMETERS" value="-Xms128M -Xmx128M" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
