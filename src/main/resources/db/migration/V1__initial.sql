@@ -1,10 +1,7 @@
-create table shortcut
+create table valorant_premier_entry
 (
-    id          bigint auto_increment
+    id   bigint auto_increment
         primary key,
-    project     varchar(255) not null,
-    shortcut    varchar(255) not null,
-    description varchar(255) not null,
-    constraint unique_project_shortcut
-        unique (project, shortcut)
+    map  varchar(255) not null,
+    date datetime     not null
 );
