@@ -31,7 +31,7 @@ jobs:
         run: mvn clean package
 
       - name: Push Images to Docker Registry
-        run: docker push -a bjoggis/jonasandersen-admin
+        run: docker push -a bjoggis/valorant-premier-bot
   manifest:
     needs: build
     runs-on: ubuntu-latest
@@ -43,7 +43,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: create-manifest
         run: |
-          docker manifest create bjoggis/jonasandersen-admin:${{ github.ref_name }} --amend bjoggis/jonasandersen-admin:${{ github.ref_name }}-x86_64
-          docker manifest push bjoggis/jonasandersen-admin:${{ github.ref_name }}
-          docker manifest create bjoggis/jonasandersen-admin:latest --amend bjoggis/jonasandersen-admin:${{ github.ref_name }}-x86_64
-          docker manifest push bjoggis/jonasandersen-admin:latest
+          docker manifest create bjoggis/valorant-premier-bot:${{ github.ref_name }} --amend bjoggis/valorant-premier-bot:${{ github.ref_name }}-x86_64
+          docker manifest push bjoggis/valorant-premier-bot:${{ github.ref_name }}
+          docker manifest create bjoggis/valorant-premier-bot:latest --amend bjoggis/valorant-premier-bot:${{ github.ref_name }}-x86_64
+          docker manifest push bjoggis/valorant-premier-bot:latest
