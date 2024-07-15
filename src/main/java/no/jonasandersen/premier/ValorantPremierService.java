@@ -30,6 +30,7 @@ public class ValorantPremierService implements ApplicationListener<ApplicationRe
     if (properties.checkOnStartup()) {
       logger.info("Check on startup is enabled. Checking playtime now.");
       checkPlayTime();
+      return;
     }
     logger.info("Check on startup is disabled.");
   }
